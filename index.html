@@ -9,11 +9,6 @@
     <meta name="description" content="Jiaqi's Personal Portfolio Website">
     <meta name="author" content="Xiaoying Riley and Jiaqi Bi">
     <link rel="shortcut icon" href="Jiaqi's new.ico">
-    <style>
-    img {
-      border-radius: 50%;
-    }
-    </style>
 
     <link href='https://fonts.googleapis.com/css?family=Lato:300,400,300italic,400italic' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
@@ -32,16 +27,35 @@
 
     <!-- Theme CSS -->
     <link id="theme-style" rel="stylesheet" href="assets/css/styles.css">
-
-    <div id='wx_pic' style='margin:0 auto;display:none;'>
-      <img src="assets/images/Jiaqi's new.JPG"/>
-    </div>
+    <link rel="stylesheet" href="css/site.css">
 
 </head>
 
 <body>
+    <div id='wx_pic' style='margin:0 auto;display:none;'>
+      <img src="assets/images/Jiaqi's new.JPG" alt="Jiaqi Bi"/>
+    </div>
+    <nav class="site-nav navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#home">Jiaqi Bi</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#siteNavMenu" aria-controls="siteNavMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="siteNavMenu">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#research">Research</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#publications">Publications</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#teaching">Teaching</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#cv">CV</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
     <!-- ******HEADER****** -->
-    <header class="header">
+    <header id="home" class="header scroll-section">
         <div class="container clearfix">
             <img class="profile-image img-fluid float-left rounded-circle" src="assets/images/Jiaqi's new.JPG" alt="profile image" width="200" height="200"/>
             <div class="profile-content float-left">
@@ -78,7 +92,7 @@
                     </div><!--//section-inner-->
                 </section><!--//section-->
 
-                <section class="experience section">
+                <section id="publications" class="experience section scroll-section">
                     <div class="section-inner shadow-sm rounded">
                         <h2 class="heading">Publications</h2>
                         <div class="content">
@@ -216,7 +230,7 @@
                     </div><!--//section-inner-->
                 </section><!--//section-->
 
-                <section class="experience section">
+                <section id="research" class="experience section scroll-section">
                     <div class="section-inner shadow-sm rounded">
                         <h2 class="heading">Research Experience</h2>
                         <div class="content">
@@ -244,7 +258,7 @@
                 </section><!--//section-->
 
 
-                <section class="experience section">
+                <section id="teaching" class="experience section scroll-section">
                     <div class="section-inner shadow-sm rounded">
                         <h2 class="heading">Teaching Experience</h2>
                         <div class="content">
@@ -272,7 +286,7 @@
 
 
 
-                <section class="projects section">
+                <section id="projects" class="projects section scroll-section">
                     <div class="section-inner shadow-sm rounded">
                         <h2 class="heading">Some Lecture Notes</h2>
                         <div class="content">
@@ -320,6 +334,21 @@
                     </div><!--//section-inner-->
                 </section><!--//section-->
 
+                <section id="contact" class="contact section scroll-section">
+                    <div class="section-inner shadow-sm rounded">
+                        <h2 class="heading">Contact</h2>
+                        <div class="content">
+                            <p>I welcome collaborations in biostatistics, statistical genomics, and applied health data science.</p>
+                            <ul class="list-unstyled contact-list">
+                                <li><i class="fas fa-envelope"></i> <a href="mailto:jbi23@uwo.ca">jbi23@uwo.ca</a></li>
+                                <li><i class="fas fa-envelope"></i> <a href="mailto:jiaqi.bi@mail.utoronto.ca">jiaqi.bi@mail.utoronto.ca</a></li>
+                                <li><i class="fas fa-link"></i> <a href="https://www.bi-jiaqi.com" target="_blank">www.bi-jiaqi.com</a></li>
+                                <li><i class="fab fa-linkedin-in"></i> <a href="https://www.linkedin.com/in/jiaqi-bi-10189a126" target="_blank">LinkedIn Profile</a></li>
+                            </ul>
+                        </div><!--//content-->
+                    </div><!--//section-inner-->
+                </section><!--//section-->
+
             </div><!--//primary-->
             <div class="secondary col-lg-4 col-12">
                  <aside class="info aside section">
@@ -328,9 +357,9 @@
                         <div class="content">
                             <ul class="list-unstyled">
                                 <li><i class="fas fa-map-marker-alt"></i><span class="sr-only">Location:</span>London, Canada</li>
-                                <li><i class="fas fa-envelope"></i><span class="sr-only">Primary Email:</span><a href="#">jbi23@uwo.ca</a></li>
-                                <li><i class="fas fa-envelope"></i><span class="sr-only">Alternative Email:</span><a href="#">jiaqi.bi@mail.utoronto.ca</a></li>
-                                <li><i class="fas fa-link"></i><span class="sr-only">Website:</span><a href="#">https://www.bi-jiaqi.com</a></li>
+                                <li><i class="fas fa-envelope"></i><span class="sr-only">Primary Email:</span><a href="mailto:jbi23@uwo.ca">jbi23@uwo.ca</a></li>
+                                <li><i class="fas fa-envelope"></i><span class="sr-only">Alternative Email:</span><a href="mailto:jiaqi.bi@mail.utoronto.ca">jiaqi.bi@mail.utoronto.ca</a></li>
+                                <li><i class="fas fa-link"></i><span class="sr-only">Website:</span><a href="https://www.bi-jiaqi.com" target="_blank">https://www.bi-jiaqi.com</a></li>
                             </ul>
                         </div><!--//content-->
                     </div><!--//section-inner-->
@@ -416,7 +445,7 @@
                     </div>
                 </aside>-->
 
-                <aside class="education aside section">
+                <aside id="cv" class="education aside section scroll-section">
                     <div class="section-inner shadow-sm rounded">
                         <h2 class="heading">Education</h2>
                         <div class="content">
@@ -527,5 +556,6 @@
     <script type="text/javascript" src="assets/plugins/github-activity/github-activity-0.1.5.min.js"></script>
     <!-- custom js -->
     <script type="text/javascript" src="assets/js/main.js"></script>
+    <script type="text/javascript" src="js/site.js"></script>
 </body>
 </html>
