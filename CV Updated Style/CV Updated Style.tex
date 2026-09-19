@@ -1,0 +1,368 @@
+\documentclass[10pt]{article}
+
+\usepackage[margin=0.78in]{geometry}
+\usepackage{fontspec}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+\usepackage{needspace}
+\usepackage[table]{xcolor}
+\usepackage{tabularx}
+
+\IfFontExistsTF{Times New Roman}{%
+  \setmainfont{Times New Roman}%
+}{%
+  \setmainfont{Latin Modern Roman}%
+}
+
+\definecolor{sectiongray}{HTML}{6E6A63}
+\definecolor{dategray}{HTML}{7B7B7B}
+\definecolor{linkred}{HTML}{B35F52}
+
+\hypersetup{
+  colorlinks=true,
+  urlcolor=linkred,
+  linkcolor=black
+}
+\urlstyle{same}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.12em}
+\setlength{\tabcolsep}{4pt}
+\setlist{topsep=0.18em,itemsep=0.12em,parsep=0pt,partopsep=0pt}
+\setlist[enumerate]{before={\interlinepenalty=10000}}
+\emergencystretch=2em
+
+\pagestyle{fancy}
+\fancyhf{}
+\cfoot{\thepage}
+\renewcommand{\headrulewidth}{0pt}
+
+\newcommand{\cvsection}[1]{%
+  \Needspace{5\baselineskip}%
+  \vspace{0.65em}%
+  {\large\bfseries\color{sectiongray} #1}\par
+  \vspace{0.18em}%
+}
+
+\newcommand{\cvsubsection}[1]{%
+  \Needspace{4\baselineskip}%
+  \vspace{0.3em}%
+  {\bfseries #1}\par
+}
+
+\newcommand{\cvitalic}[1]{%
+  {\itshape #1}\par
+}
+
+\newcommand{\cvdated}[2]{%
+  \noindent
+  \begin{minipage}[t]{\dimexpr\linewidth-1.35in\relax}
+    \raggedright\strut #1\strut
+  \end{minipage}%
+  \hfill
+  \begin{minipage}[t]{1.18in}
+    \raggedleft\strut{\color{dategray} #2}%
+  \end{minipage}\par
+}
+
+\newenvironment{cvdetailitems}{%
+  \begin{itemize}[leftmargin=1.6em,label=--,topsep=0.06em,itemsep=0.12em,parsep=0pt,partopsep=0pt,after=\vspace{0.08em}]
+}{%
+  \end{itemize}%
+}
+
+\newcommand{\cvresearchentry}[2]{%
+  \Needspace{5\baselineskip}%
+  \cvdated{#1}{#2}%
+}
+
+\newcommand{\cvteachingentry}[2]{%
+  \Needspace{7\baselineskip}%
+  \cvdated{#1}{#2}%
+}
+
+\newcommand{\cvaward}[4]{%
+  \cvdated{\textbf{#1}, #2}{#3}%
+  \vspace{-0.06em}%
+  \hspace*{1.1em}\parbox[t]{\dimexpr\linewidth-1.1em\relax}{#4}\par
+}
+
+\newcommand{\cvawarddetail}[1]{%
+  \vspace{0.02em}%
+  \hspace*{1.1em}\parbox[t]{\dimexpr\linewidth-1.1em\relax}{#1}\par
+}
+
+\newcommand{\talkitem}[2]{%
+  \item \leavevmode\begin{tabularx}{\linewidth}[t]{@{}X>{\raggedleft\arraybackslash}p{0.95in}@{}}
+    #1 & {\color{dategray} #2}
+  \end{tabularx}
+}
+
+\begin{document}
+\small
+
+\begin{center}
+  {\LARGE\bfseries Curriculum Vitae\par}
+  \vspace{0.25em}
+  {\large Jiaqi Bi\par}
+  \vspace{0.4em}
+  \href{mailto:jbi23@uwo.ca}{jbi23@uwo.ca}
+  \quad\textbar\quad
+  \url{https://jiaqi-bi-not-phd.github.io/}
+  \quad\textbar\quad
+  \url{https://github.com/Jiaqi-Bi-Not-PhD}\par
+  \vspace{0.45em}
+  {\bfseries Date of Last Revision:} September 18, 2026
+\end{center}
+
+\cvsection{A. IDENTIFICATION}
+
+\begin{tabularx}{\linewidth}{@{}>{\bfseries}p{1.35in}X@{}}
+Name: & Jiaqi Bi \\
+Email: & \href{mailto:jbi23@uwo.ca}{jbi23@uwo.ca} \\
+Website: & \url{https://jiaqi-bi-not-phd.github.io/} \\
+GitHub: & \url{https://github.com/Jiaqi-Bi-Not-PhD} \\
+Current Program: & PhD in Biostatistics, Schulich School of Medicine \& Dentistry, University of Western Ontario \\
+Location: & London, ON, Canada \\
+\end{tabularx}
+
+\cvsection{B. EDUCATION}
+
+\cvsubsection{Graduate}
+\begin{itemize}[leftmargin=1.6em,label=--]
+\item Institution: Schulich School of Medicine \& Dentistry, University of Western Ontario
+\item Degree: PhD in Biostatistics
+\item Year: Expected Aug. 2028
+\item Thesis: \emph{Statistical Methods in Two-Phase Sampling for Next Generation Sequencing Data}
+\item Supervisors: Dr. Osvaldo Espin-Garcia and Dr. Yun-Hee Choi
+\item Comprehensive Exam Passed: Apr. 30, 2025
+\end{itemize}
+
+\begin{itemize}[leftmargin=1.6em,label=--]
+\item Institution: Schulich School of Medicine \& Dentistry, University of Western Ontario
+\item Degree: MSc in Biostatistics
+\item Year: Dec. 2024
+\item Thesis: \emph{Frailty Model with Missing Covariates in Family-Based Studies}
+\item Supervisors: Dr. Yun-Hee Choi and Dr. Osvaldo Espin-Garcia
+\item Coursework: Foundations of Epidemiology; Biostatistical Research Methods (A); Survival Analysis; Multivariable Biostatistics (A); Statistical Inference (A); Advanced Data Analysis (A); Generalized Linear Model (A); Multilevel Modelling (PASS/FAIL: PASS); Missing Data (PASS/FAIL: PASS); Advanced Statistical Computing (A); Advanced Regression (A)
+\end{itemize}
+
+\cvsubsection{Undergraduate}
+\begin{itemize}[leftmargin=1.6em,label=--]
+\item Institution: Faculty of Arts \& Science, University of Toronto
+\item Degree: H.BSc in Mathematics and Statistics
+\item Year: Jun. 2022
+\item Related Coursework: Statistical Methods in Emerging Infectious Disease (A-); Applied Statistical Methods (A+); Methods of Data Analysis I and II (A- for both courses); Time Series (A-); Statistical Machine Learning (A); Statistical Design \& Analysis of Experiment (A); Complex Variables; PDE (A+); Combinatorics (A); Groups \& Symmetry (A+, Top 1 Student); Number Theory (A+); Geometrics (A+)
+\end{itemize}
+
+\cvsection{C. RESEARCH EXPERIENCE}
+
+\cvresearchentry{\textbf{Research Assistant}, Dr. Egide Kalisa Lab, University of Western Ontario, London, Canada}{Dec 2024--Present}
+\begin{cvdetailitems}
+\item Assisting in statistical analyses for environmental projects.
+\item Providing statistical and technical support to co-author articles.
+\end{cvdetailitems}
+
+\cvresearchentry{\textbf{Graduate Research Fellow}, Dr. Yun-Hee Choi and Dr. Osvaldo Espin-Garcia, University of Western Ontario, London, Canada}{Jul 2023--Present}
+\begin{cvdetailitems}
+\item Investigating methods for high-dimensional auxiliary covariates in two-phase sampling in next generation sequencing data.
+\item Developing novel methods for missing data in familial studies.
+\end{cvdetailitems}
+
+\cvresearchentry{\textbf{Research Assistant}, Dr. Marc O. Martel Lab, McGill University, Montreal, Canada (Remote)}{Jul 2023--Present}
+\begin{cvdetailitems}
+\item Conducting statistical analyses in R for multiple lab research projects.
+\item Collaborating with research teams to study pain outcomes using statistical methods and analyses.
+\item Co-authoring manuscripts for peer-reviewed publication.
+\end{cvdetailitems}
+
+\cvresearchentry{\textbf{Biostatistician}, Henan Provincial People's Hospital, Zhengzhou University, Zhengzhou, China (Remote)}{Jul 2023--May 2025}
+\begin{cvdetailitems}
+\item Performed statistical design and analysis for medical research projects.
+\item Assisted with publications focused on statistical methods.
+\end{cvdetailitems}
+
+\cvresearchentry{\textbf{Undergraduate Research Assistant}, Intelligent Adaptive Intervention Lab, University of Toronto, Toronto, Canada}{May 2022--Sep 2022}
+\begin{cvdetailitems}
+\item Investigated COVID-19 vaccine hesitancy in North America with the research team.
+\item Conducted statistical analyses in R for survey data involving more than 300 respondents.
+\end{cvdetailitems}
+
+\cvsection{D. PUBLICATIONS AND ABSTRACTS}
+
+\cvsubsection{D1. Journal Publications and Accepted Papers}
+\begin{enumerate}[leftmargin=1.6em]
+\item \textbf{Bi, J.}, Jamison, R. N., Ross, E. L., Edwards, R. R., \& Martel, M. O. (2026). Daily perceived change among patients with chronic pain: influence of sociodemographic, clinical, and psychological characteristics. \emph{PAIN Reports, 11}(4), e1449.\\
+\url{https://doi.org/10.1097/PR9.0000000000001449}
+
+\item Bruneau, A., Sirois, A., Spiegler, G., \textbf{Bi, J.}, Petkau, S., Djoudi, Y.-L., Ware, J., Alghamdi, R., Nipa, N., Perreault, M., Pag\'{e}, M. G., Ware, M. A., Perez, J., \& Martel, M. O. (2026). Factors associated with opioid craving, opioid intake, and opioid misuse in patients with chronic pain: insights from an ecological momentary assessment study. \emph{PAIN, 167}(1), 120--132.\\
+\url{https://doi.org/10.1097/j.pain.0000000000003753}
+
+\item Chang, E., Chen, F., Wu, Y., Zhang, Y., \& \textbf{Bi, J.} (2026). Exploring the causal relationship between gut microbiota and pan-cancer: A meta-analysis of Mendelian randomization studies. \emph{Scientific Reports} (Accepted).
+
+\item Chang, E., Wu, L., Li, X., Zhou, J., Zhi, H., Sun, M., Chen, G., \textbf{Bi, J.}, Li, L., Li, T., Ma, D., \& Zhang, J. (2025). Dexmedetomidine decreases cerebral hyperperfusion incidence following carotid stenting: A double-blind, randomized controlled trial. \emph{Med, 6}(3), 100523.\\
+\url{https://doi.org/10.1016/j.medj.2024.09.012}
+
+\item Kalisa, E., Archer, S., \textbf{Bi, J.}, Lee, K., \& Lacap-Bugler, D. (2026).
+The effect of sampling duration and filter extraction fraction on the measurement of atmospheric particulate-bound polycyclic aromatic hydrocarbons and their nitro-derivatives.
+\emph{Environmental Research Communications, 8}(5), 055030.\\
+\url{https://doi.org/10.1088/2515-7620/ae69a7}
+
+\item Kalisa, E., Lacap-Bugler, D., Adams, M., \textbf{Bi, J.}, Nsabimana, A., Habiyaremye, G., Uwizeye, G., Lawrence, T., Lee, K., Hayakawa, K., Pointing, S., \& Archer, S. D. J. (2026). Variability of airborne microbial communities and associations with organic pollutants in African air particulate matter across land-use types. \emph{Atmospheric Environment, 367}, 121750.\\
+\url{https://doi.org/10.1016/j.atmosenv.2025.121750}
+
+\item Zhang, T., Liu, J., Dilimulati, H., Yao, S., \textbf{Bi, J.}, Yang, Q., Wang, W., Shi, H., Xing, W., Liu, X., Zhang, Y., Chen, J., Ge, J., Springer, M. L., \& An, S. (2026). Apelin overexpression remodels aged mesenchymal stem cells to generate miR-486a-5p-enriched exosomes that drive cardiac repair. \emph{Stem Cell Research \& Therapy} (Accepted).
+\end{enumerate}
+
+\cvsubsection{D2. Submitted Manuscripts and Manuscripts Under Review}
+\begin{enumerate}[leftmargin=1.6em]
+\item Bruneau, A., Sirois, A., \textbf{Bi, J.}, Spiegler, G., Perez-Medina-Carballo, R., Babiloni, A. H., Ware, J., Ware, M. A., Perez, J., Lupien, S., \& Martel, M. O. (2025). Hypothalamic-pituitary-adrenal (HPA) axis activity, psychological states, and opioid-related problems among patients with chronic pain using opioids: Preliminary investigation using ecological momentary assessment (EMA) methods. \emph{Psychiatry Research} (Under Review).
+
+\item Chang, E., Wu, L., Zhang, T., Chen, Q., Zhou, S., Zhao, H., Howkins, A., \textbf{Bi, J.}, Li, X., Zhang, Y., Pan, L., \& Ma, D. (2026). ClpP promotes kidney cancer cell malignancy through enhanced mitophagy and decreased ferroptosis. \emph{International Journal of Biological Sciences} (Submitted).
+
+\item Kalisa, E., Adams, M., \textbf{Bi, J.}, Nsabimana, A., Habiyaremya, G., Uwizeye, G., Lawrence, T., Lee, K., Nagato, E., Hayakawa, K., Pointing, S., Archer, S., \& Lacap-Bugler, D. (2025). Microbial and organic pollutant co-exposure in African air particulate matter: A case for integrated risk assessment. \emph{Environment International} (Under Review).
+
+\item Kalisa, E., Mastin, J., Saini, A., \textbf{Bi, J.}, Lee, K., Luginaah, I., Pointing, S., Schuster, J., \& Harner, T. (2026). Evaluating bioaerosol monitoring approaches for detecting wildfire-associated microbial signals during the 2023 Canadian wildfire season. \emph{ACS Omega} (Submitted).
+
+\item Martel, M. O., \textbf{Bi, J.}, Campbell, C. M., Carriere, J. S., Paschali, M., Lazaridou, A., Meints, S. M., Pester, B., Finan, P. H., Haythornthwaite, J. A., Smith, M. T., \& Edwards, R. R. (2025). Daily pain symptoms in patients with knee osteoarthritis: Links to psychological factors, pain sensitivity, and endogenous pain modulation. \emph{Arthritis Care \& Research} (Under Revision).
+\end{enumerate}
+
+\cvsubsection{D3. Publications in Final Preparations}
+\begin{enumerate}[leftmargin=1.6em]
+\item \textbf{Bi, J.}, Briollais, L., Espin-Garcia, O., \& Choi, Y. (2026). Correlated frailty model with missing continuous covariate in family-based study. \emph{In Progress}.
+
+\item \textbf{Bi, J.}, Briollais, L., Espin-Garcia, O., \& Choi, Y. (2026). Correlated frailty model and penetrance estimates with missing covariates in family-based study: A maximum likelihood multiple imputation approach. \emph{In Progress}.
+\end{enumerate}
+
+\cvsubsection{D4. Accepted Abstracts}
+\begin{enumerate}[leftmargin=1.6em]
+\item \textbf{Bi, J.}, Sun, J., Dou, H., \& Yuan, J. (2026). Class imbalance aware ensemble learning for clinical differentiation of Parkinson disease and atypical parkinsonism. \emph{Statistical Society of Canada Annual Meeting, Case Study \#1}.
+
+\item \textbf{Bi, J.}, Briollais, L., Espin-Garcia, O., \& Choi, Y. (2026). Correlated frailty model with missing continuous covariate in family-based study. \emph{Canadian Statistics Student Conference Meeting}.
+
+\item \textbf{Bi, J.}, Espin-Garcia, O., \& Choi, Y. (2024). Correlated shared frailty model incorporating ascertainment correction with missing covariates in family-based studies. \emph{Statistical Society of Canada Annual Meeting}.
+
+\item Frankel, L., Sirois, A., Rosenthal, D., Mesli, N., \textbf{Bi, J.}, Cui, L., Ware, M., Perez, J., Fitzcharles, M. A., \& Martel, M. O. (2024). Exploring the factors contributing to daily cannabis craving and cannabis use among chronic pain patients. \emph{Department of Psychology Annual Research Day, McGill University}.
+
+\item Jamison, R. N., \textbf{Bi, J.}, Meints, S., Edwards, R. R., \& Martel, M. O. (2024). Perceived improvement or worsening among persons with chronic pain: analyses of pain app data. \emph{International Association for the Study of Pain Meeting}.
+
+\item Martel, M. O., Bruneau, A., Sirois, A., \textbf{Bi, J.}, Spiegler, G., Ware, J., Alghamdi, R., Nipa, N., Pag\'{e}, G., Ware, M., \& Perez, J. (2025). Day-to-day opioid intake among patients with chronic pain using short-acting opioids: Exploring the role of pain intensity, psychological states, and physical dependence. \emph{Canadian Pain Society Meeting}.
+
+\item Sirois, A., Frankel, L., Spiegler, G., \textbf{Bi, J.}, Rosenthal, D., Verner, M., Binshihah, A., Hudon, J., Ben-Sasson, M., Pag\'{e}, G., Perez, J., Ware, M., Fitzcharles, M.-A., \& Martel, M. O. (2025). Daily determinants of cannabis craving and cannabis intake among persons with chronic pain: Preliminary insights from an ecological momentary assessment (EMA) study. \emph{Canadian Pain Society Meeting}.
+
+\item Sirois, A., Verner, M., Bruneau, A., \textbf{Bi, J.}, Perez, J., Shir, Y., \& Martel, M. O. (2024). Week-to-week reports of physical and cognitive side effects associated with opioids: Insights from a longitudinal study among persons with chronic pain. \emph{Canadian Pain Society Meeting}.
+\end{enumerate}
+
+\cvsubsection{D5. Presentations}
+\begin{enumerate}[leftmargin=1.6em]
+\talkitem{\textbf{Bi, J.}, Sun, J., Dou, H., \& Yuan, J. ``Class Imbalance Aware Ensemble Learning for Clinical Differentiation of Parkinson Disease and Atypical Parkinsonism.'' \emph{Statistical Society of Canada Annual Meeting, Case Study \#1} (Team Poster Presentation), Hamilton, Canada.}{Jun 2026}
+\talkitem{\textbf{Bi, J.} ``Correlated Frailty Model with Missing Continuous Covariate in Family-Based Study: A Maximum Likelihood Multiple Imputation Approach.'' \emph{Canadian Statistics Student Conference Meeting} (Poster Presentation), Hamilton, Canada.}{May 2026}
+\talkitem{\textbf{Bi, J.} ``Correlated Shared Frailty Model Incorporating Ascertainment Correction with Missing Covariates in Family-Based Studies.'' \emph{Statistical Society of Canada Annual Meeting}, St. John's, Canada.}{Jun 2024}
+\talkitem{\textbf{Bi, J.} ``Correlated Shared Frailty Model Incorporating Ascertainment Correction with Missing Covariates in Family-Based Studies.'' \emph{Epidemiology and Biostatistics Research Day, University of Western Ontario} (Oral Presentation), London, Canada.}{Apr 2024}
+\talkitem{\textbf{Bi, J.} ``Factors Associated with Day-to-Day Pain Fluctuations and Pain Flares Among Patients with Chronic Pain.'' \emph{McGill CERC Pain \& Genetics Research Day}, Montreal, Canada.}{Oct 2023}
+\end{enumerate}
+
+\cvsubsection{D6. Software}
+\begin{enumerate}[leftmargin=1.6em]
+\item \textbf{Bi, J.} (n.d.). \emph{ggmultilevel} (Version 1.0.0) [Computer software]. GitHub.\\
+\url{https://github.com/Jiaqi-Bi-Not-PhD/ggmultilevel}
+\end{enumerate}
+
+\cvsection{E. TEACHING}
+
+\cvsubsection{Teaching Assistantships}
+\cvteachingentry{\textbf{BIOSTATS3100A/9509 -- Biostatistical Methods for Epidemiology}, Teaching Assistant, University of Western Ontario}{Sep 2026--Present}
+\begin{itemize}[leftmargin=1.6em,label=--]
+\item Supporting lab tutorials, including SAS instruction.
+\item Course instructor: Dr. Yun-Hee Choi
+\end{itemize}
+
+\cvteachingentry{\textbf{BIOSTATS3100A/9509 -- Biostatistical Methods for Epidemiology}, Teaching Assistant, University of Western Ontario}{Sep 2025--Dec 2025}
+\begin{itemize}[leftmargin=1.6em,label=--]
+\item Instructed weekly lab tutorials, held office hours, proctored exams, graded assessments, and supported course material preparation.
+\item Course instructor: Dr. Yun-Hee Choi
+\end{itemize}
+
+\cvteachingentry{\textbf{MPH9017B -- Health Informatics}, Teaching Assistant, University of Western Ontario}{Jan 2025--May 2025}
+\begin{itemize}[leftmargin=1.6em,label=--]
+\item Held office hours, proctored exams, graded assessments, and supported course material preparation.
+\item Course instructor: Dr. Steve Lee
+\end{itemize}
+
+\cvteachingentry{\textbf{MPH9017B -- Health Informatics}, Teaching Assistant, University of Western Ontario}{Jan 2025--May 2025}
+\begin{itemize}[leftmargin=1.6em,label=--]
+\item Held office hours, proctored exams, graded assessments, and supported course material preparation.
+\item Course instructor: Dr. Dan Lizotte
+\end{itemize}
+
+\cvteachingentry{\textbf{BIOSTATS3110B -- Multivariable Methods in Biostatistics}, Teaching Assistant, University of Western Ontario}{Jan 2025--May 2025}
+\begin{itemize}[leftmargin=1.6em,label=--]
+\item Held office hours, proctored exams, graded assessments, and supported course material preparation.
+\item Course instructor: Dr. Guangyong Zou
+\end{itemize}
+
+\cvteachingentry{\textbf{BIOSTATS3110B -- Multivariable Methods in Biostatistics}, Teaching Assistant, University of Western Ontario}{Jan 2024--May 2024}
+\begin{itemize}[leftmargin=1.6em,label=--]
+\item Instructed weekly lab tutorials, held office hours, proctored exams, graded assessments, and supported course material preparation.
+\item Course instructor: Dr. Osvaldo Espin-Garcia
+\item This course received the Teaching Excellence Award in 2024.
+\end{itemize}
+
+\cvsection{F. HONORS, CERTIFICATIONS, AND SKILLS}
+
+\cvsubsection{F1. Awards}
+\cvaward{Graduate Student Enrichment Scholarship}{Canadian Statistical Sciences Institute (CANSSI)}{Apr 2025--Apr 2026}{\$15,000 awarded by merit.}
+
+\cvaward{Western Graduate Research Scholarship}{University of Western Ontario}{Sep 2022--Aug 2027}{\$10,800 per year for 2 years awarded by the department for Master's study.}
+\cvawarddetail{\$4,500 per year for 4 years awarded by the department for Doctoral study.}
+
+\cvdated{\textbf{WEBSC Travel Award}}{2026}
+\cvawarddetail{\$500 travel award.}
+
+\cvaward{Conference Travel Awards}{Canadian Statistics Student Conference \& CANSSI}{June 2026}{\$100 Student travel award.}
+\cvawarddetail{Awarded based on merit, submitted abstract score ranked \#1 among Ontario submissions.}
+
+
+\cvaward{Conference Travel Awards}{University of Western Ontario}{Aug 2024}{\$300 travel award.}
+
+\cvsubsection{F2. Certifications}
+\begin{itemize}[leftmargin=1.6em,label=--]
+\item SAS Certified Specialist: Base Programming Using SAS 9.4 (2021)
+\item SAS Certified Professional: Advanced Programming Using SAS 9.4 (2022)
+\end{itemize}
+
+\cvsubsection{F3. Technical Skills}
+\begin{itemize}[leftmargin=1.6em,label=--]
+\item Programming: R, Stata, SAS, SQL, Python, Blimp Software
+\item Tools: LaTeX, R Markdown, R Quarto, Git, Bash/Shell scripting, Unix/Linux systems, HPC, Microsoft Office
+\end{itemize}
+
+\cvsection{G. SERVICE AND OTHER CONTRIBUTIONS}
+
+\cvsubsection{G1. Academic Service}
+\cvitalic{Conference Organization and Student Representation}
+\begin{itemize}[leftmargin=1.6em,label=--]
+\item Scientific Program Committee Member, Canadian Statistics Student Conference (CSSC) 2027 (2026--2027).
+\item Equity, Diversity, and Inclusion (EDI) Representative, Epidemiology and Biostatistics Students' Council, University of Western Ontario (2025--2026).
+\end{itemize}
+
+\cvitalic{Presentation and Poster Judge}
+\begin{itemize}[leftmargin=1.6em,label=--]
+\item Western Summer Research Conference Expo (2024)
+\item Western EpiBio Research Day (2025)
+\end{itemize}
+
+\cvitalic{Journal Reviewer}
+\begin{itemize}[leftmargin=1.6em,label=--]
+\item \emph{Advanced Science} (1 article reviewed)
+\end{itemize}
+
+\cvsubsection{G2. Other Contributions}
+\begin{itemize}[leftmargin=1.6em,label=--]
+\item Author of the University of Western Ontario (Schulich School of Medicine \& Dentistry) Beamer Template, published on \href{https://www.overleaf.com/latex/templates/university-of-western-ontario-schulich-school-of-medicine-and-dentistry-beamer-template/rrypngybtxsd}{Overleaf}.
+\end{itemize}
+
+\end{document}

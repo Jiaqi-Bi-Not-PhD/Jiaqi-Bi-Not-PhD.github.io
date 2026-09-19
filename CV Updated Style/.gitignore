@@ -1,0 +1,5 @@
+# Keep the published CV and editable source; exclude local TeX build files.
+*
+!.gitignore
+!CV Updated Style.tex
+!CV Updated Style.pdf

@@ -105,3 +105,8 @@ body {
     padding-top: 28px;
   }
 }
+
+/* Keep long DOI and website links within their cards on narrow screens. */
+.section .content a {
+  overflow-wrap: anywhere;
+}
