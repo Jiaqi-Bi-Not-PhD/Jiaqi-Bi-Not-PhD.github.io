@@ -45,7 +45,8 @@
       var currentSectionId = orderedSections[0].id;
 
       orderedSections.forEach(function (section) {
-        if (section.getBoundingClientRect().top - offset <= 0) {
+        var anchorOffset = parseFloat(window.getComputedStyle(section).scrollMarginTop) || 0;
+        if (section.getBoundingClientRect().top <= Math.max(offset, anchorOffset) + 1) {
           currentSectionId = section.id;
         }
       });
